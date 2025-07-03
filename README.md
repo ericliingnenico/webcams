@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # README #
 
 This README would normally document whatever steps are necessary to get your application up and running.
@@ -33,3 +34,6 @@ CAMS WebPortal
 
 * Repo owner or admin
 * Other community or team contact
+=======
+# webcams
+>>>>>>> 4e679a8578f0a3c8fadc9ac34b31f271e66146e0
