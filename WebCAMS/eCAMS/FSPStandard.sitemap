@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="~/Member/FSPMain.aspx" title="Home" description="Home">
+    <siteMapNode title="Jobs" url="~/Member/SectionPage.aspx?q=1" description="jobs">
+      <siteMapNode url="~/Member/FSPJobSearch.aspx" title="Open Jobs" description="List all my open jobs." >
+        <siteMapNode url="~/Member/FSPJobList.aspx" title="Results" description="" hide="yes"/>
+        <siteMapNode url="~/Member/FSPReAssignJob.aspx" title="ReAssignJob" description="" hide="yes"/>
+        <siteMapNode url="~/Member/FSPJob.aspx" title="JobClosure" description="" hide="yes"/>
+        <siteMapNode url="~/Member/FSPBookJob.aspx" title="FSPBookJob" description="" hide="yes"/>
+        <siteMapNode url="~/Member/JobList.aspx?WhichJob=C" title="Swap Jobs" description="" hide="yes"/>
+        <siteMapNode url="~/Member/JobList.aspx?WhichJob=I" title="Install Jobs" description="" hide="yes"/>
+        <siteMapNode url="~/Member/JobList.aspx?WhichJob=D" title="Deinstall Jobs" description="" hide="yes"/>
+        <siteMapNode url="~/Member/JobList.aspx?WhichJob=U" title="Upgrade Jobs" description="" hide="yes"/>
+
+      </siteMapNode>
+      <siteMapNode url="~/Member/FSPJobExceptionList.aspx" title="Exception List" description="List exception">
+        <siteMapNode url="~/Member/FSPJobException.aspx" title="Exception" description="" hide="yes"/>
+      </siteMapNode>
+
+    <siteMapNode url="~/Member/FSPClosedJobSearch.aspx" title="Closed Jobs" description="Find a closed job" >
+        <siteMapNode url="~/Member/FSPClosedJobList.aspx" title="Results" description="" hide="yes"/>
+      </siteMapNode>
+      <siteMapNode url="~/Member/FSPClosedJobWOD.aspx" title="Closed Jobs-Device Not Return" description="Find a closed job which devices not returned yet" >
+        <siteMapNode url="~/Member/FSPClosedJobWODList.aspx" title="Results" description="" hide="yes"/>
+      </siteMapNode>
+      <siteMapNode url="~/Member/FSPJob.aspx?x=1" title="Job Closure" description="Job closure" />
+    </siteMapNode>
+    <siteMapNode title="Stock" url="~/Member/SectionPage.aspx?q=2" description="Stock">
+      <siteMapNode url="~/Member/FSPStockList.aspx?md=1" title="View Incoming Stock" description="Device in transit" />
+      <siteMapNode url="~/Member/FSPStockReceived.aspx" title="Update Stock As Received" description="Stock receipt" />
+      <siteMapNode url="~/Member/FSPStockList.aspx?md=2" title="View Stock On Hand - Good" description="Device on hand" />
+      <siteMapNode url="~/Member/FSPStockList.aspx?md=3" title="View Stock On Hand - For Return" description="Device to be returned" />
+      <siteMapNode url="~/Member/FSPStockReturned.aspx" title="Update Stock As Returned" description="Stock return" />
+      <siteMapNode url="~/Member/FSPStockList.aspx?md=4" title="View Outgoing Stock" description="Device in-transit to KeyCorp" />
+      <siteMapNode url="~/Member/FSPDeviceSearch.aspx" title="Search By Serial" description="Find a device by serial number" >
+        <siteMapNode url="~/Member/FSPDeviceList.aspx" title="Results" description="" hide="yes"/>
+      </siteMapNode>
+      <siteMapNode url="~/Member/FSPStockTake.aspx" title="Stock Take" description="Stock Take" />
+	  <siteMapNode url="~/Member/FSPStockFaulty.aspx" title="Update Stock As Faulty" description="Stock faulty" />
+    </siteMapNode>
+    <siteMapNode title="Supplies" url="~/Member/SectionPage.aspx?q=3" description="Supplies">
+      <siteMapNode url="~/Member/FSPPartTranList.aspx" title="Parts Receipt" description="Receive parts" />
+      <siteMapNode url="~/Member/FSPPartInventory.aspx?m=2" title="Order Parts" description="Order Parts" />
+      <siteMapNode url="~/Member/FSPPartInventory.aspx?m=1" title="StockTake-Parts" description="Stock take-Parts" />
+    </siteMapNode>
+    <siteMapNode title="PickPack Tasks" url="~/Member/SectionPage.aspx?q=4" description="Pickpack task">
+      <siteMapNode url="~/Member/FSPTaskSearch.aspx" title="Open Tasks" description="List open pickpack tasks" >
+        <siteMapNode url="~/Member/FSPTaskList.aspx" title="Results" description="" hide="yes"/>
+      </siteMapNode>
+      <siteMapNode url="~/Member/FSPClosedTaskSearch.aspx" title="Closed Tasks" description="List closed pickpack tasks" >
+        <siteMapNode url="~/Member/FSPClosedTaskList.aspx" title="Results" description="" hide="yes"/>
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode title="Communication" url="~/Member/SectionPage.aspx?q=5" description="Communication">
+      <siteMapNode title="Downloads" url="~/Member/FSPDownloadSearch.aspx" description="Download">
+        <siteMapNode url="~/Member/FSPDownloadList.aspx" title="Results" description="" hide="yes"/>
+      </siteMapNode>
+      <siteMapNode url="~/Member/BulletinViewLog.aspx" title="Bulletin View Log" description="View Bulletin Log" />
+    </siteMapNode>
+    <siteMapNode title="Maintenance" url="~/Member/SectionPage.aspx?q=6" description="Maintenance">
+      <!--<siteMapNode url="~/Member/MaintainPWD.aspx" title="Change Password" description="Set new password" />-->
+      <siteMapNode url="~/Member/FSPMaintainPWD.aspx" title="Change Password" description="Set new FSP password" />
+      <siteMapNode url="~/Member/MaintainUser.aspx" title="Update My Details" description="Update my details" />
+    </siteMapNode>
+    <siteMapNode title="Tools" url="~/Member/SectionPage.aspx?q=7" description="Tools">
+      <!--<siteMapNode url="~/Member/FSPCalendar.aspx" title="My Calendar" description="My Calendar" />-->
+      <siteMapNode url="~/Member/FSPDelegation.aspx?id=-1" title="Create Delegation" description="Create FSP Delegation" />
+      <siteMapNode url="~/Member/FSPDelegationList.aspx" title="Delegation History" description="Current FSP Delegation history" />
+      <siteMapNode url="~/Member/FSPCJFPreJob.aspx" title="Generate CJFFile" description="List PreCJF jobs" />
+      <siteMapNode url="~/Member/FSPCJFList.aspx" title="View CJF History" description="List CJF history" />
+    </siteMapNode>
+	<siteMapNode title="PrivacyStatement" url="~/Member/PrivacyStatement.aspx" description="PrivacyStatement">
+    </siteMapNode>
+    <siteMapNode title="Logout" url="~/Member/Logout.aspx" description="Logout">
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

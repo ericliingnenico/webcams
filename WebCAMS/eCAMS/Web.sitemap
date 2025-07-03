@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="~/Member/FSPMain.aspx" title="Home" description="Home">
+    <siteMapNode title="Jobs" url="" description="">
+      <siteMapNode url="~/Member/FSPJobSearch.aspx" title="OpenJobs" description="Displays all the open jobs." />
+      <siteMapNode url="~/Member/FSPJobExceptionList.aspx" title="Exception List" description="" />
+      <siteMapNode url="~/Member/FSPClosedJobSearch.aspx" title="Closed Jobs" description="" />
+      <siteMapNode url="~/Member/FSPClosedJobWOD.aspx" title="ClosedJob-DeviceNotReturn" description="" />
+      <siteMapNode url="~/Member/FSPJobDevice.aspx" title="Job Device" description="" />
+      <siteMapNode url="~/Member/FSPJobClosure.aspx" title="Job Closure" description="" />
+    </siteMapNode>
+
+    <siteMapNode title="Devices" url="" description="">
+      <siteMapNode url="~/Member/FSPDeviceSearch.aspx" title="Device Search" description="" />
+      <siteMapNode url="~/Member/FSPStockReceived.aspx" title="Stock Receipt" description="" />
+      <siteMapNode url="~/Member/FSPStockList.aspx?md=1" title="In Transit to FSP" description="" />
+      <siteMapNode url="~/Member/FSPStockList.aspx?md=2" title="On Hand - Good" description="" />
+      <siteMapNode url="~/Member/FSPStockReturned.aspx" title="Stock Return" description="" />
+      <siteMapNode url="~/Member/FSPStockList.aspx?md=3" title="On Hand - For Return" description="" />
+      <siteMapNode url="~/Member/FSPStockList.aspx?md=4" title="In Transit to EE" description="" />
+    </siteMapNode>
+    <siteMapNode title="Parts" url="" description="">
+      <siteMapNode url="~/Member/FSPPartTranList.aspx" title="Parts Receipt" description="" />
+      <siteMapNode url="~/Member/FSPPartInventory.aspx" title="Stock Take" description="" />
+    </siteMapNode>
+    <siteMapNode title="PickPack Tasks" url="" description="">
+      <siteMapNode url="~/Member/FSPTaskSearch.aspx" title="Open Tasks" description="" />
+      <siteMapNode url="~/Member/FSPClosedTaskSearch.aspx" title="Closed Tasks" description="" />
+    </siteMapNode>
+    <siteMapNode title="Downloads" url="~/Member/FSPDownloadSearch.aspx" description="">
+    </siteMapNode>
+    <siteMapNode title="Maintenance" url="" description="">
+      <siteMapNode url="~/Member/MaintainPWD.aspx" title="Change Password" description="" />
+      <siteMapNode url="~/Member/MaintainUser.aspx" title="Update My Details" description="" />
+      <siteMapNode url="~/Member/AdminChangeActingFSP.aspx" title="Admin-Change FSP" description="" />
+    </siteMapNode>
+    <siteMapNode title="Tools" url="" description="">
+      <siteMapNode url="~/Member/FSPCJFPreJob.aspx" title="Generate CJFFile" description="" />
+      <siteMapNode url="~/Member/FSPCJFList.aspx" title="CJF History" description="" />
+    </siteMapNode>
+	 <siteMapNode title="PrivacyStatement" url="~/Member/PrivacyStatement.aspx" description="">
+    </siteMapNode> 
+    <siteMapNode title="Logout" url="~/Member/Logout.aspx" description="">
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

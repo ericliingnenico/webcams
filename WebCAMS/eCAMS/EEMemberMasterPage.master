@@ -1,0 +1,57 @@
+<%@ Master Language="VB" Inherits="EEMemberMasterPage" Codebehind="EEMemberMasterPage.master.vb" %>
+<%@ Register Src="UserControl/EEPageHeader.ascx" TagName="EEPageHeader" TagPrefix="uc1" %>
+<%@ Register Src="UserControl/EEPageFooter.ascx" TagName="EEPageFooter" TagPrefix="uc2" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1" runat="server">
+    <title>Untitled Page</title>
+    <link href="~/Styles/Styles.css" rel="stylesheet" type="text/css" />
+   	<link href="~/Styles/keycorp.css" type="text/css" rel="stylesheet">    
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>      
+ <uc1:EEPageHeader ID="EEPageHeader1" runat="server" />
+<TABLE id="Table2" cellSpacing="2" cellPadding="2" width="100%" border="0">
+
+	<tr>
+		<TD vAlign="top" class="contentborder">
+				<table width="100%" border="0" cellSpacing="0" cellPadding="0">
+				<tr>
+					<td vAlign="top"  bgcolor="#6375DE">        
+        
+        <asp:Menu ID="Menu1" runat="server" BackColor="#6375DE" DataSourceID="mySiteMapDataSource"
+            DynamicHorizontalOffset="2" Font-Bold="True" Font-Names="Verdana" Font-Size="9pt"
+            ForeColor="White" Orientation="Horizontal" StaticSubMenuIndent="10px" DisappearAfter="700" StaticEnableDefaultPopOutImage="False" Height="25px">
+            <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+            <DynamicHoverStyle BackColor="#6375DE" ForeColor="#FFCC33" />
+            <DynamicMenuStyle BackColor="#6375DE" />
+            <StaticSelectedStyle BackColor="#6375DE" ForeColor="#FFCC33" />
+            <DynamicSelectedStyle BackColor="#6375DE" />
+            <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+            <StaticHoverStyle BackColor="#6375DE" ForeColor="#FFCC33" />
+            <DynamicMenuStyle CssClass="adjustedZIndex" />
+        </asp:Menu>
+        <asp:SiteMapDataSource ID="mySiteMapDataSource" runat="server" EnableViewState="False"
+            ShowStartingNode="False" />
+                    </td>
+				</tr>
+				<tr>
+					<td class="content">
+                        &nbsp;<asp:SiteMapPath ID="mySiteMapPath" runat="server">
+                        </asp:SiteMapPath>
+                        <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+        </asp:contentplaceholder>
+					</td>
+				</tr>
+			</table>
+		</TD>
+	</tr>
+</TABLE>
+        <uc2:EEPageFooter ID="EEPageFooter1" runat="server" />
+    </form>
+</body>
+</html>

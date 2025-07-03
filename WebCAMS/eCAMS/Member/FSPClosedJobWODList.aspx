@@ -1,0 +1,40 @@
+<%@ Page Language="vb" MasterPageFile="~/MemberMasterPage.master" AutoEventWireup="false" Inherits="eCAMS.FSPClosedJobWODList" Codebehind="FSPClosedJobWODList.aspx.vb" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+		        
+
+	<TABLE id="Table2" cellSpacing="1" cellPadding="1" width="100%" border="0">
+		<TR>
+			<TD width="10"></TD>
+			<TD>
+				<P class="MemberInfo"><asp:hyperlink id="SearchAgainURL" runat="server" CssClass="MemberInfo" NavigateUrl="JobSearch.aspx">HyperLink</asp:hyperlink>::&nbsp;&gt;&gt;&nbsp;
+					<asp:label id="lblListInfo" runat="server" CssClass="MemberInfo"></asp:label>
+					&nbsp;&nbsp;To obtain an Excel file of all jobs, click
+					<asp:LinkButton id="lbDownload" runat="server" CssClass="MemberInfo">Download</asp:LinkButton></P>
+			</TD>
+			<TD width="10"></TD>
+		</TR>
+		<TR>
+			<TD width="10"></TD>
+			<TD>
+                <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
+                    <ContentTemplate>				
+			            <asp:datagrid id="grdJob" runat="server" CssClass="FormGrid" AllowSorting="True" Width="100%"
+					        OnSortCommand="grdJob_SortCommand" OnPageIndexChanged="grdJob_PageIndexChanged" GridLines="None"
+					        PageSize="50" AllowPaging="True">
+					        <AlternatingItemStyle CssClass="FormGridAlternatingCell"></AlternatingItemStyle>
+					        <HeaderStyle CssClass="FormGridHeaderCell"></HeaderStyle>
+					        <PagerStyle Position="TopAndBottom" Mode="NumericPages" CssClass="FormGridPagerCell"></PagerStyle>
+				        </asp:datagrid>
+                    </ContentTemplate>
+                    <Triggers>
+                    </Triggers>
+                </asp:UpdatePanel>	
+		    </TD>
+			<TD width="10"></TD>
+		</TR>
+	</TABLE>
+
+</asp:Content>
+
+
+

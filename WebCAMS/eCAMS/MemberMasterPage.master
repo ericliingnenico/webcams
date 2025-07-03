@@ -1,0 +1,95 @@
+<%@ Master Language="VB" Inherits="MemberMasterPage" Codebehind="MemberMasterPage.master.vb" %>
+<%@ Register Src="UserControl/PageHeader.ascx" TagName="PageHeader" TagPrefix="uc1" %>
+<%@ Register Src="UserControl/PageFooter.ascx" TagName="PageFooter" TagPrefix="uc2" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Untitled Page</title>
+    <link href="~/Styles/Styles.css" rel="stylesheet" type="text/css" />
+   	<link href="~/Styles/keycorp.css" type="text/css" rel="stylesheet">
+    <link href="~/Images/homescreen.gif" rel="apple-touch-icon" />
+    <link href="~/Images/CAMS.ico" rel="SHORTCUT ICON"/>  	
+
+    <link rel="stylesheet" href="~/Styles/jquery.qtip.min.css" type="text/css" />
+
+<%-- <!--QTip-->
+    <script type="text/javascript" src="../Scripts/jquery-1.6.3.min.js"></script> --%>
+    <script type="text/javascript" src="../jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="../Scripts/jquery.qtip.min.js"></script> 
+    <script type="text/javascript" src="../Scripts/jqHelpTip.js"></script> 
+ <!--QTip-->
+
+
+<!--datetimePicker-->
+<%--<link href="~/jqueryui/jquery-ui.min.css" rel="stylesheet" type="text/css" />--%>
+<script type="text/javascript" src="../jqueryui/jquery-ui.min.js"></script>
+
+<link href="~/jqueryui/jquery-ui-timepicker-addon.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../jqueryui/jquery-ui-timepicker-addon.js"></script>
+<!--datetimePicker-->
+
+</head>
+
+<body>
+    <form id="form1" runat="server">
+        <!-- Anti-Forgery token here -->
+    <%: System.Web.Helpers.AntiForgery.GetHtml() %>
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>   
+
+        <uc1:PageHeader ID="PageHeader1" runat="server" />
+
+<TABLE id="Table2" cellSpacing="2" cellPadding="2" width="100%" border="0">
+
+	<tr>
+		<TD vAlign="top" class="contentborder">
+				<table width="100%" border="0" cellSpacing="0" cellPadding="0">
+				<tr>
+					<td vAlign="top" class="sectionbar">        
+					    <asp:Menu ID="Menu1" runat="server" BackColor="#F23D3C" DataSourceID="mySiteMapDataSource"
+                            DynamicHorizontalOffset="2" Font-Bold="True" Font-Names="Verdana" Font-Size="9pt"
+                            ForeColor="White" Orientation="Horizontal" StaticSubMenuIndent="10px" DisappearAfter="700" StaticEnableDefaultPopOutImage="False" Height="25px">
+                            <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                            <DynamicHoverStyle BackColor="#F23D3C" ForeColor="#FFCC33" />
+                            <DynamicMenuStyle BackColor="#F23D3C" />
+                            <StaticSelectedStyle BackColor="#F23D3C" ForeColor="#FFCC33" />
+                            <DynamicSelectedStyle BackColor="#F23D3C" />
+                            <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                            <StaticHoverStyle BackColor="#F23D3C" ForeColor="#FFCC33" />
+                            <DynamicMenuStyle CssClass="adjustedZIndex" />
+                        </asp:Menu>
+                        <asp:SiteMapDataSource ID="mySiteMapDataSource" runat="server" EnableViewState="False"
+                            ShowStartingNode="False" />
+                        <!-- <DynamicMenuStyle CssClass="adjustedZIndex" />  Fix the problem asp:Menu in IE8-->                            
+                    </td>
+				</tr>
+				<tr>
+					<td class="content">
+                        <asp:SiteMapPath ID="mySiteMapPath" runat="server">
+                        </asp:SiteMapPath>
+				        <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+                        </asp:contentplaceholder>
+					</td>
+				</tr>
+			</table>
+		</TD>
+	</tr>
+</TABLE>
+        <uc2:PageFooter ID="PageFooter1" runat="server" />
+
+  
+    </form>
+<!-- Script for GoogleTracker -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-15856800-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>    
+</body>
+</html>

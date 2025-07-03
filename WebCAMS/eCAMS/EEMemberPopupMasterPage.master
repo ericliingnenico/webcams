@@ -1,0 +1,51 @@
+<%@ Master Language="VB" Inherits="EEMemberPopupMasterPage" Codebehind="EEMemberPopupMasterPage.master.vb" %>
+<%@ Register Src="UserControl/EEPageHeader.ascx" TagName="EEPageHeader" TagPrefix="uc1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Untitled Page</title>
+    <link href="~/Styles/Styles.css" rel="stylesheet" type="text/css" />
+   	<link href="~/Styles/keycorp.css" type="text/css" rel="stylesheet">
+</head>
+<body>  <!--   onblur='javascript:self.focus();' -->
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>      
+<TABLE id='Table1'  cellSpacing='1' cellPadding='1' width='100%' border='0'>
+    <TR>
+        <TD width='10'></TD>
+        <TD>   
+                    <uc1:EEPageHeader ID="EEPageHeader1" runat="server" />
+
+        </TD>
+     </TR>
+     <tr>
+        <TD width='10'></TD>
+        <TD vAlign='middle' bgColor='#003399' height='2'></TD>
+     </TR>
+     <TR>
+        <TD width='10'></TD>
+        <TD>
+        <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+        </asp:contentplaceholder>
+       </TD>
+      </TR>
+      <TR>
+        <TD width='10'></TD>
+        <TD vAlign='middle' bgColor='#003399' height='2'></TD>
+       </TR>
+       <TR>
+        <TD width='10'></TD>
+        <TD>
+        </TD>
+       </TR>
+       <TR>
+        <TD width='10'></TD>
+        <TD align='center'><INPUT class='formdefield' onclick='javascript: return self.close();' type='button' value='Close'></TD>
+       </TR>
+     </TABLE>
+    </form>
+</body>
+</html>

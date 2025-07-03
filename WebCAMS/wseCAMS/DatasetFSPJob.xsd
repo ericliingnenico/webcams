@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DatasetFSPJob" targetNamespace="http://tempuri.org/DatasetFSPJob.xsd" xmlns:mstns="http://tempuri.org/DatasetFSPJob.xsd" xmlns="http://tempuri.org/DatasetFSPJob.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DatasetFSPJob" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DatasetFSPJob" msprop:Generator_DataSetName="DatasetFSPJob">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="FSPJobs" msprop:Generator_UserTableName="FSPJobs" msprop:Generator_RowDeletedName="FSPJobsRowDeleted" msprop:Generator_TableClassName="FSPJobsDataTable" msprop:Generator_RowChangedName="FSPJobsRowChanged" msprop:Generator_RowClassName="FSPJobsRow" msprop:Generator_RowChangingName="FSPJobsRowChanging" msprop:Generator_RowEvArgName="FSPJobsRowChangeEvent" msprop:Generator_RowEvHandlerName="FSPJobsRowChangeEventHandler" msprop:Generator_TablePropName="FSPJobs" msprop:Generator_TableVarName="tableFSPJobs" msprop:Generator_RowDeletingName="FSPJobsRowDeleting">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="~/Member/Member.aspx" title="Home" description="Home">
+    <siteMapNode title="Quick Find" url="~/Member/QuickFind.aspx" description="Quick find jobs">
+      <siteMapNode url="~/Member/QuickFindList.aspx" title="Results" description="" hide="yes"/>
+    </siteMapNode>
+    <siteMapNode title="Log New Job" url="~/Member/SectionPage.aspx?q=0" description="Log new jobs">
+      <siteMapNode url="~/Member/LogJob.aspx?WhichJob=4" title="Replacement" description="Log a replacement job" />
+      <siteMapNode url="~/Member/LogJob.aspx?WhichJob=1" title="Install and Additional Terminal" description="Log an install and additional terminal job" />
+      <siteMapNode url="~/Member/LogJob.aspx?WhichJob=2" title="Recovery" description="Log a recovery job. (Use RECOVERY for unknown TID)" />
+      <siteMapNode url="~/Member/LogJob.aspx?WhichJob=2&amp;M=1" title="Branch Pickup" description="Log a branch pickup job" />
+      <siteMapNode url="~/Member/LogJob.aspx?WhichJob=3" title="Upgrade" description="Log an upgrade job" />
+      <siteMapNode url="~/Member/LogJob.aspx?WhichJob=5" title="Other Services" description="Log an Other Services request" />
+      <siteMapNode url="~/Member/JobDuplicator.aspx" title="Duplicate Job" description="Duplicate a current job with a different TID" />
+    </siteMapNode>
+    <siteMapNode title="View Open Jobs" url="~/Member/SectionPage.aspx?q=1" description="View Open Jobs">
+      <siteMapNode url="~/Member/JobSearch.aspx?WhichJob=C" title="Replacement" description="View current open replacement jobs">
+        <siteMapNode url="~/Member/JobList.aspx?WhichJob=C" title="Results" description="" hide="yes"/>
+      </siteMapNode>
+      <siteMapNode url="~/Member/JobSearch.aspx?WhichJob=I" title="Install and Additional Terminal" description="View current open Install and Additional Terminal jobs" >
+        <siteMapNode url="~/Member/JobList.aspx?WhichJob=I" title="Results" description="" hide="yes"/>
+      </siteMapNode>
+      <siteMapNode url="~/Member/JobSearch.aspx?WhichJob=D" title="Recovery" description="View current open recovery jobs" >
+        <siteMapNode url="~/Member/JobList.aspx?WhichJob=D" title="Results" description="" hide="yes"/>
+      </siteMapNode>
+      <siteMapNode url="~/Member/JobSearch.aspx?WhichJob=U" title="Upgrade" description="View current open upgrade jobs" >
+        <siteMapNode url="~/Member/JobList.aspx?WhichJob=U" title="Results" description="" hide="yes"/>
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode title="Merchant" url="~/Member/SectionPage.aspx?q=2" description="View merchant site details">
+      <siteMapNode url="~/Member/SiteSearch.aspx" title="Find Merchant Site" description="Find a merchant site" >
+        <siteMapNode url="~/Member/SiteList.aspx" title="Results" description="" hide="yes"/>
+      </siteMapNode>
+      <siteMapNode url="~/Member/SiteEquipmentSearch.aspx" title="View Site Equipment" description="Find terminal on site" >
+        <siteMapNode url="~/Member/SiteEquipmentList.aspx" title="Results" description="" hide="yes"/>
+      </siteMapNode>
+      <!--
+      <siteMapNode url="~/Member/FSPCoverage.aspx"  title="Check Technician Coverage" description="Check Suburbs Covered By Keycorp Technicians">
+      </siteMapNode>
+      -->
+    </siteMapNode>
+    <siteMapNode title="Terminal" url="~/Member/SectionPage.aspx?q=3" description="View terminal">
+      <siteMapNode url="~/Member/TerminalSearch.aspx" title="Terminal Job List" description="Find job via terminal ID" >
+        <siteMapNode url="~/Member/TerminalList.aspx" title="Results" description="" hide="yes"/>
+      </siteMapNode>
+      <siteMapNode url="~/Member/DeviceSearch.aspx" title="Search By Serial" description="Find device via serial number" >
+        <siteMapNode url="~/Member/DeviceList.aspx" title="Results" description="" hide="yes"/>
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode title="Maintenance" url="~/Member/SectionPage.aspx?q=4" description="Maintenance">
+      <siteMapNode url="~/Member/MaintainPWD.aspx" title="Change Password" description="Set my new password" />
+      <siteMapNode url="~/Member/MaintainUser.aspx" title="Update My Details" description="Update my contact details" />
+    </siteMapNode>
+	 <siteMapNode title="PrivacyStatement" url="~/Member/PrivacyStatement.aspx" description="PrivacyStatement">
+    </siteMapNode>
+    <siteMapNode title="Logout" url="~/Member/Logout.aspx" description="Logout CAMS Web Portal">
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

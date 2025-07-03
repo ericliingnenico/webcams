@@ -1,0 +1,50 @@
+<%@ Master Language="VB" Inherits="Member_pFSP" Codebehind="pFSP.master.vb" %>
+
+<%@ Register Src="~/UserControl/CopyrightLabel.ascx" TagPrefix="custom" TagName="CopyrightLabel" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=<%= Request.Browser("ScreenPixelsWidth") %>, height=<%=Request.Browser("ScreenPixelsHeight")%>"/>
+    <title>PDA</title>
+    <link href="~/Styles/Styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<TABLE id="Table1" cellSpacing="0" cellPadding="0" width="100%"	border="0">
+	<TR>
+		<TD style="WIDTH: 111px; HEIGHT: 49px" align="left"><IMG src="/eCams/Images/LogoKYCPDA.PNG">
+		</TD>
+		<TD style="HEIGHT: 49px" width="5">&nbsp;</TD>
+		<TD style="WIDTH: 1044px; HEIGHT: 49px" vAlign="top"><asp:label id="lblLoginInfo" runat="server" CssClass="PageHeaderSmall"></asp:label>
+			<asp:panel id="pnlMenu" runat="server" Width="187px">
+<asp:hyperlink id="hlnkHome" CssClass="PageHeaderSmall" runat="server" NavigateUrl="~/member/pFSPMain.aspx">Home</asp:hyperlink>&nbsp;&nbsp;|&nbsp;&nbsp; 
+<asp:hyperlink id="hlnkLogout" CssClass="PageHeaderSmall" runat="server" NavigateUrl="~/member/Logout.aspx">Logout</asp:hyperlink></asp:panel></TD>
+	</TR>
+	<TR>
+		<TD vAlign="middle" bgColor="#003399" colSpan="3" height="2"></TD>
+	</TR>
+</TABLE>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+<table cellSpacing="0" cellPadding="0" width="100%" border="0">
+	<TR>
+		<TD colspan="2" vAlign="middle" bgColor="#003399" height="2"></TD>
+	</TR>
+	<tr>
+		<td align="left">&nbsp;
+		</td>
+		<td style="PADDING-RIGHT: 15px; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; PADDING-TOP: 5px"
+			valign="center" align="left"><font color="#ff0000" face="Verdana" size="1">
+				<custom:CopyrightLabel ID="CopyrightLabel1" runat="server" /></font>
+		</td>
+	</tr>
+</table>
+</body>
+</html>

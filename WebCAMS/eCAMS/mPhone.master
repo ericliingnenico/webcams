@@ -1,0 +1,136 @@
+﻿<%@ Master Language="VB" Inherits="mPhone" Codebehind="mPhone.master.vb" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta content="no" name="apple-mobile-web-app-capable" />
+<%--    <meta content="index,follow" name="robots" />--%>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <link href="~/Images/homescreen.gif" rel="apple-touch-icon" />
+    <meta content="minimum-scale=1.0, width=device-width, maximum-scale=0.6667, user-scalable=no" name="viewport" />
+
+
+   <%If IsiPhone then %>
+    <link href="~/Styles/iWebKit.css" rel="stylesheet" media="screen" type="text/css" />
+   <%else %>
+    <link href="~/Styles/iWebKit_IE.css" rel="stylesheet" media="screen" type="text/css" />
+   <%End If %>
+   <script src="../Scripts/functions.js" type="text/javascript"></script>
+    <title>PocketCAMS</title>
+    <link href="~/Images/startup.png" rel="apple-touch-startup-image" />
+<%--    <meta name="viewport" content="width=<%= Request.Browser("ScreenPixelsWidth") %>, height=<%=Request.Browser("ScreenPixelsHeight")%>"/>
+--%>
+<!--signature -->
+	<link rel="stylesheet" type="text/css" href="~/signature/assets/jquery.signaturepad.mid.css"/>
+      <!--[if lt IE 9]><script src="../signature/assets/flashcanvas.js"></script><![endif]-->
+      <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>-->
+<%--    <script src="../jquerymobile/jquery-1.8.2.min.js"></script>--%>
+    <script type="text/javascript" src="../jquery/jquery.min.js"></script>
+
+<!--Google Map-->
+      <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=<%= GMapAPIKey %>"> </script>
+
+
+<script type="text/javascript">
+    function addLoadEvent(func) {
+        var oldonload = window.onload;
+        if (typeof window.onload != 'function') {
+            window.onload = func;
+        } else {
+            window.onload = function () {
+                if (oldonload) {
+                    oldonload();
+                }
+                func();
+            }
+        }
+    }
+    function addUnLoadEvent(func) {
+        var oldonunload = window.onunload;
+        if (typeof window.onunload != 'function') {
+            window.onunload = func;
+        } else {
+            window.onunload = function () {
+                if (oldonunload) {
+                    oldonunload();
+                }
+                func();
+            }
+        }
+    }
+
+    addLoadEvent(function () {
+        setTimeout(function () { window.scrollTo(0, 1) }, 100);
+    })
+
+    $(document).ready(function () {
+        //toggle drilldown css
+        $(".drilldownheading").click(function () {
+            var rotateval = $(this).attr("rotateval");
+            var contentclassidx = ".drilldowncontent" + $(this).attr("contentclassidx");
+            //alert(rotateval);
+            if (rotateval == "0") {
+                $(this).attr("rotateval", "1");
+                $(this).children(".arrow").css({
+                    '-webkit-transform': 'rotate(90deg)'
+                });
+            }
+            else {
+                $(this).attr("rotateval", "0");
+                $(this).children(".arrow").css({
+                    '-webkit-transform': 'rotate(-90deg)'
+                });
+                //goToByID("btxx");
+                goToByClass("drilldownanchor");
+            }
+            $(contentclassidx).slideToggle("fast");
+            
+        });
+
+        //collapse first
+        $(".drilldownheading").click();
+
+    });
+
+    function goToByID(id) {
+        $('html,body').animate({ scrollTop: $("#" + id).offset().top }, 'slow');
+    }
+
+    function goToByClass(cls) {
+        $('html,body').animate({ scrollTop: $("." + cls).offset().top }, 'slow');
+    }
+
+</script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- Anti-Forgery token here -->
+    <%: System.Web.Helpers.AntiForgery.GetHtml() %>
+    <div id="topbar">
+        <%if IsShowMenu then %>
+        <div id="leftnav" class="white">
+            <a href="mpFSPMain.aspx" >
+            Home
+<%--            <img alt="home" src="../images/home.png" />--%>
+            </a>
+        </div>
+        <div id="centernav" class="white">
+            <a href="mpFSPJobList.aspx" >JobList</a>
+        </div>
+
+        <div id="rightnav" class="white">
+            <a href="mpGMapViewer.aspx?svr=FJ&torefresh=<%= Date.Now.ToString("yyyMMddMMhhmmss") %>" >JobMap</a>
+        </div>
+        <% end if %>
+    </div>
+    <%If Not IsiPhone then %>
+    <div>&nbsp;</div>
+    <%end if%>
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

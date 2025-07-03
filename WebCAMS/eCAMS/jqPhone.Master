@@ -1,0 +1,52 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="jqPhone.master.vb" Inherits=".jqPhone" %>
+<!DOCTYPE html>
+<html>
+<head id="Head1" runat="server">
+    <meta content="no" name="apple-mobile-web-app-capable" />
+    <meta name="format-detection" content="telephone=no"/>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <link href="~/Images/homescreen.gif" rel="apple-touch-icon" />
+    <meta content="minimum-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <link href="~/Images/startup.png" rel="apple-touch-startup-image" />
+<!--JQuery Mobile-->
+
+<%--<link rel="stylesheet" href="~/jquerymobile/jquery.mobile-1.2.0.min.css" />--%>
+<%--<script src="../jquerymobile/jquery-1.8.2.min.js"></script>--%>
+<%--<script src="../jquerymobile/jquery.mobile-1.2.0.min.js"></script>--%>
+
+<link href="~/jquerymobile/jquery.mobile.min.css" rel="stylesheet" />
+<script type="text/javascript"  src="../jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../jquerymobile/jquery.mobile.min.js"></script>
+
+<link href="~/Styles/iPhone.css" rel="stylesheet" type="text/css" />
+
+    <title>PocketCAMS</title>
+<!--signature -->
+	<link rel="stylesheet" type="text/css" href="~/signature/assets/jquery.signaturepad_large.css"/>
+      <!--[if lt IE 9]><script src="../signature/assets/flashcanvas.js"></script><![endif]-->
+      <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script> -->
+<!--Google Map-->
+      <script type="text/javascript" src="//maps.google.com/maps/api/js?sensor=false"> </script>
+</head>
+<body>
+<div data-role="page">
+    <form id="form1" runat="server" data-ajax="false">
+        <%if IsShowMenu then %>
+        <div data-role="header" data-position="inline" data-theme="a">
+	        <div data-role="navbar">
+		        <ul>
+			        <li><a href="jqFSPMain.aspx" rel="external">Home</a></li>
+			        <li><a href="jqFSPJobList.aspx" rel="external">JobList</a></li>
+                    <li><a href="jqGMapViewer.aspx?svr=FJ&torefresh=<%= Date.Now.ToString("yyyMMddMMhhmmss") %>" rel="external">JobMap</a></li>
+		        </ul>
+	        </div><!-- /navbar -->
+        </div>
+        <% end if %>
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        <div data-role="content">
+        </div>
+            </asp:ContentPlaceHolder>
+    </form>
+</div>
+</body>
+</html>

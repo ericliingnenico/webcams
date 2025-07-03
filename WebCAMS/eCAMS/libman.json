@@ -1,0 +1,34 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+
+    //jquery
+    {
+      "library": "jquery@3.7.1",
+      "destination": "jquery/",
+      "files": [
+        "jquery.min.js"
+      ]
+    },
+    //jquerymobile
+    {
+      "library": "jquery-mobile@1.4.5",
+      "destination": "jquerymobile/",
+      "files": [ "jquery.mobile.min.css", "jquery.mobile.min.js", "images/*.*" ]
+    },
+
+    //jquery-ui-timepicker-addon
+    {
+      "library": "jquery-ui-timepicker-addon@1.6.3",
+      "destination": "jqueryui/",
+      "files": [ "jquery-ui-timepicker-addon.css", "jquery-ui-timepicker-addon.js" ]
+    },
+    //jqueryui
+    {
+      "library": "jqueryui@1.13.2",
+      "destination": "jqueryui/",
+      "files": [ "jquery-ui.min.js" ]
+    }
+  ]
+}

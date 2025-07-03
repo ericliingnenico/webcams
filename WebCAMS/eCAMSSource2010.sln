@@ -1,0 +1,81 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33801.447
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "eCAMSSetup", "eCAMSSetup\eCAMSSetup.vdproj", "{79AD0B38-21FE-4CCE-AFC6-387229B0314D}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "wseCAMSSetup", "wseCAMSSetup\wseCAMSSetup.vdproj", "{76A4E97E-33C2-4E95-9B86-B8EC88A05A15}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{10CBAC27-314E-49F3-9278-CBCB91C46C23}"
+	ProjectSection(SolutionItems) = preProject
+		eCAMSSource2010.vsmdi = eCAMSSource2010.vsmdi
+		Local.testsettings = Local.testsettings
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "wseCAMS", "wseCAMS\wseCAMS.vbproj", "{F64C3E4E-C5A1-461D-AA9F-DBE6D5AAEAA8}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "eCAMS", "eCAMS\eCAMS.vbproj", "{670D14F9-8789-44C7-B1DC-776AB7BF7FDE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F64C3E4E-C5A1-461D-AA9F-DBE6D5AAEAA8} = {F64C3E4E-C5A1-461D-AA9F-DBE6D5AAEAA8}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{2B6AFC59-25E1-48AC-B21A-391D3906CC5E}"
+	ProjectSection(SolutionItems) = preProject
+		default.ps1 = default.ps1
+		psake.psm1 = psake.psm1
+		run-build.ps1 = run-build.ps1
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+		Debug|Any CPU = Debug|Any CPU
+		Release|.NET = Release|.NET
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{79AD0B38-21FE-4CCE-AFC6-387229B0314D}.Debug|.NET.ActiveCfg = Release
+		{79AD0B38-21FE-4CCE-AFC6-387229B0314D}.Debug|.NET.Build.0 = Release
+		{79AD0B38-21FE-4CCE-AFC6-387229B0314D}.Debug|Any CPU.ActiveCfg = Debug
+		{79AD0B38-21FE-4CCE-AFC6-387229B0314D}.Debug|Any CPU.Build.0 = Debug
+		{79AD0B38-21FE-4CCE-AFC6-387229B0314D}.Release|.NET.ActiveCfg = Release
+		{79AD0B38-21FE-4CCE-AFC6-387229B0314D}.Release|.NET.Build.0 = Release
+		{79AD0B38-21FE-4CCE-AFC6-387229B0314D}.Release|Any CPU.ActiveCfg = Release
+		{79AD0B38-21FE-4CCE-AFC6-387229B0314D}.Release|Any CPU.Build.0 = Release
+		{76A4E97E-33C2-4E95-9B86-B8EC88A05A15}.Debug|.NET.ActiveCfg = Release
+		{76A4E97E-33C2-4E95-9B86-B8EC88A05A15}.Debug|.NET.Build.0 = Release
+		{76A4E97E-33C2-4E95-9B86-B8EC88A05A15}.Debug|Any CPU.ActiveCfg = Debug
+		{76A4E97E-33C2-4E95-9B86-B8EC88A05A15}.Debug|Any CPU.Build.0 = Debug
+		{76A4E97E-33C2-4E95-9B86-B8EC88A05A15}.Release|.NET.ActiveCfg = Release
+		{76A4E97E-33C2-4E95-9B86-B8EC88A05A15}.Release|.NET.Build.0 = Release
+		{76A4E97E-33C2-4E95-9B86-B8EC88A05A15}.Release|Any CPU.ActiveCfg = Release
+		{76A4E97E-33C2-4E95-9B86-B8EC88A05A15}.Release|Any CPU.Build.0 = Release
+		{F64C3E4E-C5A1-461D-AA9F-DBE6D5AAEAA8}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{F64C3E4E-C5A1-461D-AA9F-DBE6D5AAEAA8}.Debug|.NET.Build.0 = Debug|Any CPU
+		{F64C3E4E-C5A1-461D-AA9F-DBE6D5AAEAA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F64C3E4E-C5A1-461D-AA9F-DBE6D5AAEAA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F64C3E4E-C5A1-461D-AA9F-DBE6D5AAEAA8}.Release|.NET.ActiveCfg = Release|Any CPU
+		{F64C3E4E-C5A1-461D-AA9F-DBE6D5AAEAA8}.Release|.NET.Build.0 = Release|Any CPU
+		{F64C3E4E-C5A1-461D-AA9F-DBE6D5AAEAA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F64C3E4E-C5A1-461D-AA9F-DBE6D5AAEAA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{670D14F9-8789-44C7-B1DC-776AB7BF7FDE}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{670D14F9-8789-44C7-B1DC-776AB7BF7FDE}.Debug|.NET.Build.0 = Debug|Any CPU
+		{670D14F9-8789-44C7-B1DC-776AB7BF7FDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{670D14F9-8789-44C7-B1DC-776AB7BF7FDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{670D14F9-8789-44C7-B1DC-776AB7BF7FDE}.Release|.NET.ActiveCfg = Release|Any CPU
+		{670D14F9-8789-44C7-B1DC-776AB7BF7FDE}.Release|.NET.Build.0 = Release|Any CPU
+		{670D14F9-8789-44C7-B1DC-776AB7BF7FDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{670D14F9-8789-44C7-B1DC-776AB7BF7FDE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6E30D823-F632-4C08-BBDE-2439FE0B0191}
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = eCAMSSource2010.vsmdi
+	EndGlobalSection
+EndGlobal

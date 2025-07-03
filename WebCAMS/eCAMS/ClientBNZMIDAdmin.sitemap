@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+	<siteMapNode url="~/Member/Member.aspx" title="Home" description="Home">
+		<siteMapNode title="Tools" url="~/Member/SectionPage.aspx?q=7" description="Tools">
+		  <siteMapNode url="~/Member/AdminMIDAlloc.aspx" title="Application MID Allocation" description="Application MID Allocation" />
+		</siteMapNode>
+		<siteMapNode title="Maintenance" url="~/Member/SectionPage.aspx?q=1" description="Maintenance">
+			<siteMapNode url="~/Member/MaintainPWD.aspx" title="Change Password" description="Set new password" />
+		</siteMapNode>
+		<siteMapNode title="PrivacyStatement" url="~/Member/PrivacyStatement.aspx" description="">
+        </siteMapNode>
+		<siteMapNode title="Logout" url="~/Member/Logout.aspx" description="Logout">
+		</siteMapNode>
+	</siteMapNode>
+</siteMap>
